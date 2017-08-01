@@ -1,156 +1,165 @@
 
 /****************************************
-              MAIN STYLES
+              Base Element Styles
 *****************************************/
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 body {
-  font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #3a3a3a;
+    background: #f4f4f4;
 }
-h1 {
-  font-size: 2em;
+
+p {
+    font-size: .95em;
+    margin-bottom: 1.8em;
 }
+
+h1, 
+h2,
+h3 {
+    margin-top: 0;
+    font-family: 'Comfortaa', cursive;
+}
+
+h2,
+h3,
 a {
-  padding: 0;
-  text-decoration: none;
-  color: black;
+    color: #093a58;
 }
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+
+h1,
+h2 {
+    margin-bottom: 50px;
 }
-h1, h2 {
-  text-align: center;
-  margin: 0;
+
+h2 {
+    font-size: 20px;
 }
-ol, ul {
-  margin: 0;
-  padding: 0;
+
+a {
+    text-decoration: none;
 }
+
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 /****************************************
-    HEADER & BASE LAYER LAYOUTS
+              Base Layout Styles
 *****************************************/
-.main-nav,
-.name {
-  margin: 0 auto;
-  padding: 25px;
+
+/***------ Navigation ------***/
+
+.name a,
+.main-nav a {
+    display: block;
+    text-align: center;
+    padding: 10px 15px;
 }
 
-.intro {
-  text-align: center;
+.main-nav li {
+    background-color: #fff;
 }
 
-.main-header {
-  background-color: #FAFAFA;
+.name, .main-nav li {
+    text-align: center;
+    margin: 10px 0;
 }
-
-/** Styles **/
 
 .main-nav a:hover {
-  background-color: lightblue;
-  color: #fff;
-}
-#portfolio {
-  padding-top: 30px;
+    color: lightblue;
 }
 
-/** Layout **/
+/***------ Layout Containers ------***/
 
-.main-nav {
-  text-align: center;
-}
-.main-nav a {
-  display: block;
-  padding: 10px 50px;
-  background: #fff;
+.intro {
+    padding: 50px 0;
+    max-width: 100%;
 }
 
-.intro p, #contact {
-  padding: 20px;
-  text-align: center;
-  margin: 0 auto;
+.container {
+    width: 90%;
+    margin: 0 auto;
 }
-#contact {
-  max-width: 50%;
+
+/***------ Content Blocks -------***/
+
+.profile {
+    text-align: center;
 }
+
 .main-content {
-  padding: 0 10%;
-}
-/****************************************
-        CONTENT
-*****************************************/
-
-/** Styles **/
-.main-content {
-  background-color: lightblue;
+    padding: 50px 0;
+    text-align: center;
+    background-color: #fff;
 }
 
-/** Layout **/
+.main-footer {
+    max-width: 400px;
+    margin: 0 auto;
+    padding-top: 50px;
+    text-align: center;
+}
 
+.tiles li {
+    padding: 0 20px;
+}
 
 /****************************************
           MEDIA QUERIES
 *****************************************/
+
 @media screen and (min-width: 768px) {
-  .main-content {
-    text-align: center;
-  }
-  .tiles li {
-    vertical-align: top;
-    display: inline-block;
-    width: 45%;
-    margin: 0 auto;
-    padding: 5%;
-  }
-  .main-nav li {
-    display: inline-block;
-  }
-  .intro {
-    width: 100%;
-    padding: 10%;
-  }
-  .intro p {
-    float: left;
-    max-width: 60%;
-    padding: 0 20px;
-    vertical-align: center;
-  }
-  .intro img {
-    float: right;
-    max-width: 40%;
-  }
+    .main-nav li {
+        display: inline-block;
+        background: none;
+        text-align: center;
+    }
+    .main-nav {
+        text-align: center;
+        margin: auto 0;
+    }
+    
+    .profile-image {
+        float: right;
+    }
+    
+    .profile-text {
+        font-size: 1.1em;
+        text-align: left;
+        max-width: 320px;
+        float: left;
+    }
+    
+    .tiles li {
+        max-width: 49%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    
 }
 
 @media screen and (min-width: 1024px) {
-
-  .name {
-    float: left;
-  }
-  .main-nav {
-    float: right;
-  }
-  .tiles li {
-    width: 30%;
-    padding: 2%;
-  }
-  .intro {
-    width: 100%;
-    padding: 10%;
-  }
-  .intro p {
-    font-size: 1.75em;
-  }
+    .name {
+        float: left;
+    }
+    .main-nav {
+        text-align: right;
+    }
+    
+    .tiles li {
+        max-width: 30%;
+    }
+    
 }
 
 /** Clearfix **/
-.clearfix::after {
-  content: '';
-  clear: both;
-  display: table;
-}
+    .clearfix::after {
+      content: '';
+      clear: both;
+      display: table;
+    }
